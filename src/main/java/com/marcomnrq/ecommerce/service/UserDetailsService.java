@@ -4,17 +4,16 @@ import com.marcomnrq.ecommerce.domain.model.Role;
 import com.marcomnrq.ecommerce.domain.model.User;
 import com.marcomnrq.ecommerce.domain.repository.UserRepository;
 import com.marcomnrq.ecommerce.exception.CustomException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Optional;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Optional;
 
 @Service
 @AllArgsConstructor

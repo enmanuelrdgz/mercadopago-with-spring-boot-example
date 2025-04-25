@@ -1,11 +1,10 @@
 package com.marcomnrq.ecommerce.domain.model;
 
+import java.util.List;
+import javax.persistence.*;
 import lombok.Data;
 import net.minidev.json.annotate.JsonIgnore;
 import org.hibernate.annotations.NaturalId;
-
-import javax.persistence.*;
-import java.util.List;
 
 @Data
 @Entity

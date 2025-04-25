@@ -4,10 +4,9 @@ import com.marcomnrq.ecommerce.domain.model.User;
 import com.marcomnrq.ecommerce.domain.repository.UserRepository;
 import com.marcomnrq.ecommerce.exception.CustomException;
 import com.marcomnrq.ecommerce.resource.UserResource;
+import java.util.Optional;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @Service
 @AllArgsConstructor

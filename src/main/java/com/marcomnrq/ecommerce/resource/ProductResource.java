@@ -4,8 +4,8 @@ import lombok.Data;
 
 @Data
 public class ProductResource {
-    private String name;
-    private Integer stock;
-    private Float price;
-    private Boolean enabled;
+  private String name;
+  private Integer stock;
+  private Float price;
+  private Boolean enabled;
 }

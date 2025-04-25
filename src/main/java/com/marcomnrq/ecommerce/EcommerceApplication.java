@@ -10,12 +10,12 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 @SpringBootApplication
 public class EcommerceApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(EcommerceApplication.class, args);
-    }
+  public static void main(String[] args) {
+    SpringApplication.run(EcommerceApplication.class, args);
+  }
 
-    @Bean
-    public ModelMapper modelMapper() {
-        return new ModelMapper();
-    }
+  @Bean
+  public ModelMapper modelMapper() {
+    return new ModelMapper();
+  }
 }

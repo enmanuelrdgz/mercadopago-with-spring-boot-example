@@ -3,6 +3,9 @@ package com.marcomnrq.ecommerce.controller;
 import com.marcomnrq.ecommerce.domain.model.Product;
 import com.marcomnrq.ecommerce.resource.ProductResource;
 import com.marcomnrq.ecommerce.service.ProductService;
+import java.util.List;
+import java.util.stream.Collectors;
+import javax.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.Page;
@@ -10,10 +13,6 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import javax.validation.Valid;
-import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @AllArgsConstructor
