@@ -8,12 +8,12 @@ import javax.persistence.*;
 @Entity
 @Table(name = "refresh_tokens")
 public class RefreshToken extends AuditModel {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    private User user;
+  @OneToOne(fetch = FetchType.LAZY)
+  private User user;
 
-    private String token;
+  private String token;
 }

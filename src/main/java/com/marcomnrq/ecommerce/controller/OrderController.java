@@ -1,7 +1,6 @@
 package com.marcomnrq.ecommerce.controller;
 
 import com.marcomnrq.ecommerce.resource.IpnResource;
-import com.marcomnrq.ecommerce.resource.MercadopagoResource;
 import com.marcomnrq.ecommerce.service.OrderService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;

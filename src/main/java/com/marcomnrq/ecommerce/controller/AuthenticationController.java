@@ -5,13 +5,11 @@ import com.marcomnrq.ecommerce.resource.authentication.LoginRequest;
 import com.marcomnrq.ecommerce.resource.authentication.RefreshTokenRequest;
 import com.marcomnrq.ecommerce.resource.authentication.RegistrationRequest;
 import com.marcomnrq.ecommerce.service.AuthenticationService;
+import javax.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import javax.validation.Valid;
-import java.security.Principal;
 
 @RestController
 @AllArgsConstructor

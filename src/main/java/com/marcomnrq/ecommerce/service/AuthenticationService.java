@@ -1,6 +1,5 @@
 package com.marcomnrq.ecommerce.service;
 
-import com.marcomnrq.ecommerce.domain.model.Role;
 import com.marcomnrq.ecommerce.domain.model.User;
 import com.marcomnrq.ecommerce.domain.repository.RoleRepository;
 import com.marcomnrq.ecommerce.domain.repository.UserRepository;
@@ -9,6 +8,10 @@ import com.marcomnrq.ecommerce.resource.authentication.LoginRequest;
 import com.marcomnrq.ecommerce.resource.authentication.RefreshTokenRequest;
 import com.marcomnrq.ecommerce.resource.authentication.RegistrationRequest;
 import com.marcomnrq.ecommerce.security.JwtProvider;
+import java.time.Instant;
+import java.util.Arrays;
+import java.util.Collections;
+
 import lombok.AllArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -17,9 +20,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.time.Instant;
-import java.util.Arrays;
 
 @Service
 @AllArgsConstructor
@@ -46,7 +46,7 @@ public class AuthenticationService {
         user.setFirstName(registrationRequest.getFirstName());
         user.setLastName(registrationRequest.getLastName());
         user.setPassword(passwordEncoder.encode(registrationRequest.getPassword()));
-        user.setRoles(Arrays.asList(roleRepository.findByName("ROLE_USER")));
+        user.setRoles(Collections.singletonList(roleRepository.findByName("ROLE_USER")));
         user.setEnabled(true);
 
 

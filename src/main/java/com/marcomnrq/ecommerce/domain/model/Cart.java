@@ -1,11 +1,10 @@
 package com.marcomnrq.ecommerce.domain.model;
 
+import java.util.List;
+import javax.persistence.*;
 import lombok.Data;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
-
-import javax.persistence.*;
-import java.util.List;
 
 @Data
 @Entity

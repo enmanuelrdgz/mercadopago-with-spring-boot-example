@@ -11,11 +11,9 @@ import com.mercadopago.MercadoPago;
 import com.mercadopago.exceptions.MPException;
 import com.mercadopago.resources.Preference;
 import com.mercadopago.resources.datastructures.preference.*;
-import lombok.AllArgsConstructor;
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 
 @Service
 @AllArgsConstructor
@@ -41,7 +39,7 @@ public class CartService {
     public Cart addItem(Long userId, CartItem cartItem){
         User user = userRepository.findById(userId).orElseThrow(() -> new CustomException("user not found"));
         Cart cart = cartRepository.findByUser(user).orElseThrow(() -> new CustomException("user not found"));
-        if(cart.getItems().contains(cartItem) == true){
+        if(cart.getItems().contains(cartItem)){
             // Item is already on cart
             int index = cart.getItems().indexOf(cartItem);
             int quantity = cart.getItems().get(index).getQuantity();
